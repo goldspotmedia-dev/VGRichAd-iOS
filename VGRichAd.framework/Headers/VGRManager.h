@@ -54,5 +54,7 @@ cacheExpireMinutes:(int)cacheExpireMinutes;
 
 - (NSArray*) getSortVGRDatas;
 
+- (void) terminate;
+
 @end
 
