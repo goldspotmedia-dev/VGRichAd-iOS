@@ -41,20 +41,20 @@ cacheExpireMinutes:(int)cacheExpireMinutes;
 - (BOOL)request;
 
 // JSON形式(VAST)のデータからコンバート
-- (NSError*)createAdFromJSONData:(NSData *)jsonData;
+- (void)createAdFromJSONData:(NSData *)jsonData;
 
 // XML形式(VAST)のデータからコンバート
-- (NSError*)createAdFromXmlData:(NSData *)xmlData;
+- (void)createAdFromXmlData:(NSData *)xmlData;
 
 // String形式(XML:VAST)のデータからコンバート
-- (NSError*)createAdFromXMLString:(NSString *)xmlString;
+- (void)createAdFromXMLString:(NSString *)xmlString;
 
 - (NSDictionary*) cacheAll;
 - (void) deleteExpiredCacheAll;
 
 - (NSArray*) getSortVGRDatas;
 
-- (void) terminate;
+- (void) clearVgrData:(NSString*)vgrKey;
 
 @end
 
