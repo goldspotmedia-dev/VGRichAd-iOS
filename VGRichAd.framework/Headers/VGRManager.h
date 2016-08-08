@@ -41,13 +41,13 @@ cacheExpireMinutes:(int)cacheExpireMinutes;
 - (BOOL)request;
 
 // JSON形式(VAST)のデータからコンバート
-- (void)createAdFromJSONData:(NSData *)jsonData;
+- (NSError*)createAdFromJSONData:(NSData *)jsonData;
 
 // XML形式(VAST)のデータからコンバート
-- (void)createAdFromXmlData:(NSData *)xmlData;
+- (NSError*)createAdFromXmlData:(NSData *)xmlData;
 
 // String形式(XML:VAST)のデータからコンバート
-- (void)createAdFromXMLString:(NSString *)xmlString;
+- (NSError*)createAdFromXMLString:(NSString *)xmlString;
 
 - (NSDictionary*) cacheAll;
 - (void) deleteExpiredCacheAll;
